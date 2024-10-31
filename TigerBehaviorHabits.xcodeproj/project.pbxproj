@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E1FA9722CD37FF5002EB2BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9712CD37FF5002EB2BD /* HomeViewController.swift */; };
+		1E1FA9762CD38121002EB2BD /* BehaviourTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9752CD38121002EB2BD /* BehaviourTestViewController.swift */; };
+		1E1FA9782CD3812A002EB2BD /* BehaviourResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9772CD3812A002EB2BD /* BehaviourResultViewController.swift */; };
+		1E1FA97A2CD38149002EB2BD /* BehaviourHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9792CD38149002EB2BD /* BehaviourHomeViewController.swift */; };
+		1E1FA97E2CD38154002EB2BD /* HealthHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA97C2CD38154002EB2BD /* HealthHomeViewController.swift */; };
+		1E1FA97F2CD38154002EB2BD /* HealthResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA97D2CD38154002EB2BD /* HealthResultViewController.swift */; };
+		1E1FA9802CD38154002EB2BD /* HealthTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA97B2CD38154002EB2BD /* HealthTestViewController.swift */; };
+		1E7F852E2C6A60830094B034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F852D2C6A60830094B034 /* AppDelegate.swift */; };
+		1E7F85302C6A60830094B034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F852F2C6A60830094B034 /* SceneDelegate.swift */; };
+		1E7F85352C6A60830094B034 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F85342C6A60830094B034 /* Base */; };
+		1E7F85372C6A60840094B034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F85362C6A60840094B034 /* Assets.xcassets */; };
+		1E7F853A2C6A60840094B034 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F85392C6A60840094B034 /* Base */; };
+		E63E5E58784A8830690665C3 /* Pods_TigerBehaviorHabits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6195F174AAEEFCC4C9149397 /* Pods_TigerBehaviorHabits.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E1FA9712CD37FF5002EB2BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1E1FA9752CD38121002EB2BD /* BehaviourTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourTestViewController.swift; sourceTree = "<group>"; };
+		1E1FA9772CD3812A002EB2BD /* BehaviourResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourResultViewController.swift; sourceTree = "<group>"; };
+		1E1FA9792CD38149002EB2BD /* BehaviourHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourHomeViewController.swift; sourceTree = "<group>"; };
+		1E1FA97B2CD38154002EB2BD /* HealthTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTestViewController.swift; sourceTree = "<group>"; };
+		1E1FA97C2CD38154002EB2BD /* HealthHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHomeViewController.swift; sourceTree = "<group>"; };
+		1E1FA97D2CD38154002EB2BD /* HealthResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthResultViewController.swift; sourceTree = "<group>"; };
+		1E7F852A2C6A60830094B034 /* TigerBehaviorHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TigerBehaviorHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7F852D2C6A60830094B034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E7F852F2C6A60830094B034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E7F85342C6A60830094B034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E7F85362C6A60840094B034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E7F85392C6A60840094B034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E7F853B2C6A60840094B034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51953007598C5A9C3BEF1C0E /* Pods-TigerBehaviorHabits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerBehaviorHabits.debug.xcconfig"; path = "Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits.debug.xcconfig"; sourceTree = "<group>"; };
+		6195F174AAEEFCC4C9149397 /* Pods_TigerBehaviorHabits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerBehaviorHabits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDE411D1135D6EB9697CCFB /* Pods-TigerBehaviorHabits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerBehaviorHabits.release.xcconfig"; path = "Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E7F85272C6A60830094B034 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63E5E58784A8830690665C3 /* Pods_TigerBehaviorHabits.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E7F85212C6A60830094B034 = {
+			isa = PBXGroup;
+			children = (
+				1E7F852C2C6A60830094B034 /* TigerBehaviorHabits */,
+				1E7F852B2C6A60830094B034 /* Products */,
+				60E74F6C53788AFE379F8503 /* Pods */,
+				9C30FB07E85BBF044C509D27 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E7F852B2C6A60830094B034 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E7F852A2C6A60830094B034 /* TigerBehaviorHabits.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E7F852C2C6A60830094B034 /* TigerBehaviorHabits */ = {
+			isa = PBXGroup;
+			children = (
+				1E7F852D2C6A60830094B034 /* AppDelegate.swift */,
+				1E7F852F2C6A60830094B034 /* SceneDelegate.swift */,
+				1E1FA9712CD37FF5002EB2BD /* HomeViewController.swift */,
+				1E1FA9792CD38149002EB2BD /* BehaviourHomeViewController.swift */,
+				1E1FA9752CD38121002EB2BD /* BehaviourTestViewController.swift */,
+				1E1FA9772CD3812A002EB2BD /* BehaviourResultViewController.swift */,
+				1E1FA97C2CD38154002EB2BD /* HealthHomeViewController.swift */,
+				1E1FA97B2CD38154002EB2BD /* HealthTestViewController.swift */,
+				1E1FA97D2CD38154002EB2BD /* HealthResultViewController.swift */,
+				1E7F85332C6A60830094B034 /* Main.storyboard */,
+				1E7F85362C6A60840094B034 /* Assets.xcassets */,
+				1E7F85382C6A60840094B034 /* LaunchScreen.storyboard */,
+				1E7F853B2C6A60840094B034 /* Info.plist */,
+			);
+			path = TigerBehaviorHabits;
+			sourceTree = "<group>";
+		};
+		60E74F6C53788AFE379F8503 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51953007598C5A9C3BEF1C0E /* Pods-TigerBehaviorHabits.debug.xcconfig */,
+				8FDE411D1135D6EB9697CCFB /* Pods-TigerBehaviorHabits.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C30FB07E85BBF044C509D27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6195F174AAEEFCC4C9149397 /* Pods_TigerBehaviorHabits.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E7F85292C6A60830094B034 /* TigerBehaviorHabits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E7F853E2C6A60840094B034 /* Build configuration list for PBXNativeTarget "TigerBehaviorHabits" */;
+			buildPhases = (
+				EBFAE62DB9E36FB4A371A23F /* [CP] Check Pods Manifest.lock */,
+				1E7F85262C6A60830094B034 /* Sources */,
+				1E7F85272C6A60830094B034 /* Frameworks */,
+				1E7F85282C6A60830094B034 /* Resources */,
+				C13AFD42913E6118D55688AF /* [CP] Embed Pods Frameworks */,
+				A4B5803B3BC9DF32290B1031 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TigerBehaviorHabits;
+			productName = TigerBehaviorHabits;
+			productReference = 1E7F852A2C6A60830094B034 /* TigerBehaviorHabits.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E7F85222C6A60830094B034 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					1E7F85292C6A60830094B034 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 1E7F85252C6A60830094B034 /* Build configuration list for PBXProject "TigerBehaviorHabits" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E7F85212C6A60830094B034;
+			productRefGroup = 1E7F852B2C6A60830094B034 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E7F85292C6A60830094B034 /* TigerBehaviorHabits */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E7F85282C6A60830094B034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7F85372C6A60840094B034 /* Assets.xcassets in Resources */,
+				1E7F853A2C6A60840094B034 /* Base in Resources */,
+				1E7F85352C6A60830094B034 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4B5803B3BC9DF32290B1031 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C13AFD42913E6118D55688AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TigerBehaviorHabits/Pods-TigerBehaviorHabits-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBFAE62DB9E36FB4A371A23F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TigerBehaviorHabits-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E7F85262C6A60830094B034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7F852E2C6A60830094B034 /* AppDelegate.swift in Sources */,
+				1E1FA97F2CD38154002EB2BD /* HealthResultViewController.swift in Sources */,
+				1E1FA97A2CD38149002EB2BD /* BehaviourHomeViewController.swift in Sources */,
+				1E7F85302C6A60830094B034 /* SceneDelegate.swift in Sources */,
+				1E1FA9802CD38154002EB2BD /* HealthTestViewController.swift in Sources */,
+				1E1FA9722CD37FF5002EB2BD /* HomeViewController.swift in Sources */,
+				1E1FA9782CD3812A002EB2BD /* BehaviourResultViewController.swift in Sources */,
+				1E1FA97E2CD38154002EB2BD /* HealthHomeViewController.swift in Sources */,
+				1E1FA9762CD38121002EB2BD /* BehaviourTestViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E7F85332C6A60830094B034 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E7F85342C6A60830094B034 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E7F85382C6A60840094B034 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E7F85392C6A60840094B034 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E7F853C2C6A60840094B034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E7F853D2C6A60840094B034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E7F853F2C6A60840094B034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51953007598C5A9C3BEF1C0E /* Pods-TigerBehaviorHabits.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TigerBehaviorHabits/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "TigerBehaviorHabits needs access to the camera function to take photos and share and save them.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "TigerBehaviorHabits needs access to the photo album feature to save pictures to the photo album.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "TigerBehaviorHabits needs access to your photo album to save downloaded images.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "TigerBehaviorHabits needs access to obtain your device information for analysis and to bring you a unique gaming experience.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TigerBehaviorHabits.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1E7F85402C6A60840094B034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FDE411D1135D6EB9697CCFB /* Pods-TigerBehaviorHabits.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TigerBehaviorHabits/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "TigerBehaviorHabits needs access to the camera function to take photos and share and save them.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "TigerBehaviorHabits needs access to the photo album feature to save pictures to the photo album.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "TigerBehaviorHabits needs access to your photo album to save downloaded images.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "TigerBehaviorHabits needs access to obtain your device information for analysis and to bring you a unique gaming experience.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TigerBehaviorHabits.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E7F85252C6A60830094B034 /* Build configuration list for PBXProject "TigerBehaviorHabits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E7F853C2C6A60840094B034 /* Debug */,
+				1E7F853D2C6A60840094B034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E7F853E2C6A60840094B034 /* Build configuration list for PBXNativeTarget "TigerBehaviorHabits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E7F853F2C6A60840094B034 /* Debug */,
+				1E7F85402C6A60840094B034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E7F85222C6A60830094B034 /* Project object */;
+}
