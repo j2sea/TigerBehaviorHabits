@@ -16,9 +16,10 @@
 		1E1FA9802CD38154002EB2BD /* HealthTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA97B2CD38154002EB2BD /* HealthTestViewController.swift */; };
 		1E1FA9A32CD3871D002EB2BD /* quiz.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A22CD3871D002EB2BD /* quiz.zip */; };
 		1E1FA9A52CD38742002EB2BD /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A42CD38742002EB2BD /* QuizModel.swift */; };
-		1E1FA9AC2CD38A4B002EB2BD /* SCCPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A72CD38A4B002EB2BD /* SCCPrivacyViewController.m */; };
-		1E1FA9AD2CD38A4B002EB2BD /* SCCReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A92CD38A4B002EB2BD /* SCCReachabilityManager.m */; };
+		1E1FA9AC2CD38A4B002EB2BD /* TBPrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A72CD38A4B002EB2BD /* TBPrivacyPolicyViewController.m */; };
+		1E1FA9AD2CD38A4B002EB2BD /* TBNetReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A92CD38A4B002EB2BD /* TBNetReachabilityManager.m */; };
 		1E1FA9AE2CD38A4B002EB2BD /* UIViewController+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AB2CD38A4B002EB2BD /* UIViewController+Config.m */; };
+		1E1FA9B32CD3A70E002EB2BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E1FA9B22CD3A70E002EB2BD /* GoogleService-Info.plist */; };
 		1E7F852E2C6A60830094B034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F852D2C6A60830094B034 /* AppDelegate.swift */; };
 		1E7F85302C6A60830094B034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F852F2C6A60830094B034 /* SceneDelegate.swift */; };
 		1E7F85352C6A60830094B034 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F85342C6A60830094B034 /* Base */; };
@@ -37,13 +38,14 @@
 		1E1FA97D2CD38154002EB2BD /* HealthResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthResultViewController.swift; sourceTree = "<group>"; };
 		1E1FA9A22CD3871D002EB2BD /* quiz.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = quiz.zip; sourceTree = "<group>"; };
 		1E1FA9A42CD38742002EB2BD /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
-		1E1FA9A62CD38A4B002EB2BD /* SCCPrivacyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCPrivacyViewController.h; sourceTree = "<group>"; };
-		1E1FA9A72CD38A4B002EB2BD /* SCCPrivacyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCPrivacyViewController.m; sourceTree = "<group>"; };
-		1E1FA9A82CD38A4B002EB2BD /* SCCReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCReachabilityManager.h; sourceTree = "<group>"; };
-		1E1FA9A92CD38A4B002EB2BD /* SCCReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCReachabilityManager.m; sourceTree = "<group>"; };
+		1E1FA9A62CD38A4B002EB2BD /* TBPrivacyPolicyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBPrivacyPolicyViewController.h; sourceTree = "<group>"; };
+		1E1FA9A72CD38A4B002EB2BD /* TBPrivacyPolicyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBPrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		1E1FA9A82CD38A4B002EB2BD /* TBNetReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNetReachabilityManager.h; sourceTree = "<group>"; };
+		1E1FA9A92CD38A4B002EB2BD /* TBNetReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetReachabilityManager.m; sourceTree = "<group>"; };
 		1E1FA9AA2CD38A4B002EB2BD /* UIViewController+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Config.h"; sourceTree = "<group>"; };
 		1E1FA9AB2CD38A4B002EB2BD /* UIViewController+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Config.m"; sourceTree = "<group>"; };
 		1E1FA9AF2CD38A50002EB2BD /* TigerBehaviorHabits-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TigerBehaviorHabits-Bridging-Header.h"; sourceTree = "<group>"; };
+		1E1FA9B22CD3A70E002EB2BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E7F852A2C6A60830094B034 /* TigerBehaviorHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TigerBehaviorHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F852D2C6A60830094B034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7F852F2C6A60830094B034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,10 +101,10 @@
 				1E1FA97B2CD38154002EB2BD /* HealthTestViewController.swift */,
 				1E1FA97D2CD38154002EB2BD /* HealthResultViewController.swift */,
 				1E1FA9A42CD38742002EB2BD /* QuizModel.swift */,
-				1E1FA9A62CD38A4B002EB2BD /* SCCPrivacyViewController.h */,
-				1E1FA9A72CD38A4B002EB2BD /* SCCPrivacyViewController.m */,
-				1E1FA9A82CD38A4B002EB2BD /* SCCReachabilityManager.h */,
-				1E1FA9A92CD38A4B002EB2BD /* SCCReachabilityManager.m */,
+				1E1FA9A62CD38A4B002EB2BD /* TBPrivacyPolicyViewController.h */,
+				1E1FA9A72CD38A4B002EB2BD /* TBPrivacyPolicyViewController.m */,
+				1E1FA9A82CD38A4B002EB2BD /* TBNetReachabilityManager.h */,
+				1E1FA9A92CD38A4B002EB2BD /* TBNetReachabilityManager.m */,
 				1E1FA9AA2CD38A4B002EB2BD /* UIViewController+Config.h */,
 				1E1FA9AB2CD38A4B002EB2BD /* UIViewController+Config.m */,
 				1E1FA9A22CD3871D002EB2BD /* quiz.zip */,
@@ -111,6 +113,7 @@
 				1E7F85382C6A60840094B034 /* LaunchScreen.storyboard */,
 				1E7F853B2C6A60840094B034 /* Info.plist */,
 				1E1FA9AF2CD38A50002EB2BD /* TigerBehaviorHabits-Bridging-Header.h */,
+				1E1FA9B22CD3A70E002EB2BD /* GoogleService-Info.plist */,
 			);
 			path = TigerBehaviorHabits;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				1E7F85372C6A60840094B034 /* Assets.xcassets in Resources */,
 				1E7F853A2C6A60840094B034 /* Base in Resources */,
+				1E1FA9B32CD3A70E002EB2BD /* GoogleService-Info.plist in Resources */,
 				1E1FA9A32CD3871D002EB2BD /* quiz.zip in Resources */,
 				1E7F85352C6A60830094B034 /* Base in Resources */,
 			);
@@ -277,8 +281,8 @@
 				1E1FA9782CD3812A002EB2BD /* BehaviourResultViewController.swift in Sources */,
 				1E1FA97E2CD38154002EB2BD /* HealthHomeViewController.swift in Sources */,
 				1E1FA9762CD38121002EB2BD /* BehaviourTestViewController.swift in Sources */,
-				1E1FA9AC2CD38A4B002EB2BD /* SCCPrivacyViewController.m in Sources */,
-				1E1FA9AD2CD38A4B002EB2BD /* SCCReachabilityManager.m in Sources */,
+				1E1FA9AC2CD38A4B002EB2BD /* TBPrivacyPolicyViewController.m in Sources */,
+				1E1FA9AD2CD38A4B002EB2BD /* TBNetReachabilityManager.m in Sources */,
 				1E1FA9AE2CD38A4B002EB2BD /* UIViewController+Config.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +443,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "TigerBehaviorHabits needs access to the camera function to take photos and share and save them.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "TigerBehaviorHabits needs access to the photo album feature to save pictures to the photo album.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "TigerBehaviorHabits needs access to your photo album to save downloaded images.";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "TigerBehaviorHabits needs access to obtain your device information for analysis and to bring you a unique gaming experience.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "The App would like permission to access your device information to help personalize your experience and improve app functionality through data analysis.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -480,7 +484,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "TigerBehaviorHabits needs access to the camera function to take photos and share and save them.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "TigerBehaviorHabits needs access to the photo album feature to save pictures to the photo album.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "TigerBehaviorHabits needs access to your photo album to save downloaded images.";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "TigerBehaviorHabits needs access to obtain your device information for analysis and to bring you a unique gaming experience.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "The App would like permission to access your device information to help personalize your experience and improve app functionality through data analysis.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

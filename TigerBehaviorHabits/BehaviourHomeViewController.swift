@@ -16,26 +16,26 @@ class BehaviourHomeViewController: UIViewController {
     }
     
 
-    @IBAction func HArd(_ sender: Any) {
+    @IBAction func clickHard(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourTestViewController") as! BehaviourTestViewController
         vc.isFromGame = "HardMode"
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
-    @IBAction func MEdium(_ sender: Any) {
+    @IBAction func clickMedium(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourTestViewController") as! BehaviourTestViewController
         vc.isFromGame = "MediumMode"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func Easy(_ sender: Any) {
+    @IBAction func clickEasy(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourTestViewController") as! BehaviourTestViewController
         vc.isFromGame = "EasyMode"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func Back(_ sender: Any) {
+    @IBAction func clickBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 

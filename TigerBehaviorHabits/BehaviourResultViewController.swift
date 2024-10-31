@@ -20,20 +20,20 @@ class BehaviourResultViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = true
-        Exam()
+        startExam()
         
     }
     
     //MARK: - IBActions
   
     
-    @IBAction func Done(_ sender: Any) {
+    @IBAction func clickDone(_ sender: Any) {
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        appDelegate.setQuizHome()
         navigationController?.popToRootViewController(animated: true)
     }
     
-    func Exam() {
+    func startExam() {
         
         var correct:Int = 0
         var wrong:Int = 0

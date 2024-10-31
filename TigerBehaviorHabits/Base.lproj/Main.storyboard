@@ -63,7 +63,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="Behaviour:" destination="MMy-dg-q0q" eventType="touchUpInside" id="uxt-gS-OMk"/>
+                                            <action selector="behaviourBtnAction:" destination="MMy-dg-q0q" eventType="touchUpInside" id="uxt-gS-OMk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx9-X3-spH">
@@ -83,7 +83,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="Habit:" destination="MMy-dg-q0q" eventType="touchUpInside" id="JVU-LV-6Sn"/>
+                                            <action selector="habitBtnAction:" destination="MMy-dg-q0q" eventType="touchUpInside" id="JVU-LV-6Sn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgR-rq-4bZ">
@@ -103,7 +103,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="Share:" destination="MMy-dg-q0q" eventType="touchUpInside" id="HoC-hm-i2o"/>
+                                            <action selector="shareBtnAction:" destination="MMy-dg-q0q" eventType="touchUpInside" id="HoC-hm-i2o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-Fi-CwC">
@@ -120,7 +120,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="Rate:" destination="MMy-dg-q0q" eventType="touchUpInside" id="YQB-RG-zx4"/>
+                                            <action selector="rate:" destination="MMy-dg-q0q" eventType="touchUpInside" id="YQB-RG-zx4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXp-c3-UTj">
@@ -160,6 +160,10 @@
                                     <constraint firstItem="OXp-c3-UTj" firstAttribute="leading" secondItem="wRd-Fi-CwC" secondAttribute="trailing" constant="10" id="uhZ-fp-DSX"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-au-3lM">
+                                <rect key="frame" x="186" y="416" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c98-Kd-Lja"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,6 +182,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aUP-hv-Sg0"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="qUa-au-3lM" id="1Hd-cI-UIh"/>
+                        <outlet property="opView" destination="qDN-kL-xRL" id="X1z-v9-HPp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbE-wM-003" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,7 +226,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Back:" destination="tcE-1j-VGx" eventType="touchUpInside" id="oeZ-yN-E9z"/>
+                                    <action selector="clickBack:" destination="tcE-1j-VGx" eventType="touchUpInside" id="oeZ-yN-E9z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjh-Ni-828">
@@ -238,7 +246,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="HArd:" destination="tcE-1j-VGx" eventType="touchUpInside" id="smB-Te-ITv"/>
+                                    <action selector="clickHard:" destination="tcE-1j-VGx" eventType="touchUpInside" id="smB-Te-ITv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fO-z0-yAF">
@@ -258,7 +266,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="MEdium:" destination="tcE-1j-VGx" eventType="touchUpInside" id="WDt-DS-lI4"/>
+                                    <action selector="clickMedium:" destination="tcE-1j-VGx" eventType="touchUpInside" id="WDt-DS-lI4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKl-MC-t1y">
@@ -278,7 +286,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Easy:" destination="tcE-1j-VGx" eventType="touchUpInside" id="iEQ-eM-PHI"/>
+                                    <action selector="clickEasy:" destination="tcE-1j-VGx" eventType="touchUpInside" id="iEQ-eM-PHI"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTiger" translatesAutoresizingMaskIntoConstraints="NO" id="Zrz-Pr-vFt">
@@ -365,7 +373,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Back:" destination="ROO-UA-Vna" eventType="touchUpInside" id="uaJ-Vo-fjY"/>
+                                    <action selector="clickBackAction:" destination="ROO-UA-Vna" eventType="touchUpInside" id="uaJ-Vo-fjY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaM-uN-tI1">
@@ -385,7 +393,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="HArd:" destination="ROO-UA-Vna" eventType="touchUpInside" id="GCx-J5-Dof"/>
+                                    <action selector="clickHardAction:" destination="ROO-UA-Vna" eventType="touchUpInside" id="GCx-J5-Dof"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5M-sW-RCZ">
@@ -405,7 +413,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="MEdium:" destination="ROO-UA-Vna" eventType="touchUpInside" id="hKs-gh-R6s"/>
+                                    <action selector="clickMediumAction:" destination="ROO-UA-Vna" eventType="touchUpInside" id="hKs-gh-R6s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkW-HI-o4V">
@@ -425,7 +433,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Easy:" destination="ROO-UA-Vna" eventType="touchUpInside" id="8fx-N8-PyN"/>
+                                    <action selector="clickEasyAction:" destination="ROO-UA-Vna" eventType="touchUpInside" id="8fx-N8-PyN"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTiger" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-Pj-SZp">
@@ -736,7 +744,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Back:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="OVb-Ch-YiO"/>
+                                    <action selector="backAction:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="OVb-Ch-YiO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlr-T4-j9c">
@@ -793,7 +801,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="OptionThree:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="KW1-mu-MkF"/>
+                                    <action selector="createOptionThree:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="KW1-mu-MkF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMw-zg-S4C">
@@ -813,7 +821,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="OptionFour:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="orY-KX-769"/>
+                                    <action selector="createOptionFour:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="orY-KX-769"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFn-Ga-jlf">
@@ -833,7 +841,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="OptionTwo:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="iPr-Bl-nTn"/>
+                                    <action selector="clickOptionTwo:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="iPr-Bl-nTn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-kG-VKL">
@@ -853,7 +861,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="OptionOne:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="PlU-Dw-Z5j"/>
+                                    <action selector="clickOptionOne:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="PlU-Dw-Z5j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rc-z9-B1Q">
@@ -873,7 +881,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Next:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="hpg-KL-dSO"/>
+                                    <action selector="doNext:" destination="bQ8-AW-I3o" eventType="touchUpInside" id="hpg-KL-dSO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -983,7 +991,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Done:" destination="h6i-y6-BDh" eventType="touchUpInside" id="oj9-F7-3LO"/>
+                                    <action selector="clickDone:" destination="h6i-y6-BDh" eventType="touchUpInside" id="oj9-F7-3LO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1137,10 +1145,10 @@
             </objects>
             <point key="canvasLocation" x="-731" y="-35"/>
         </scene>
-        <!--Privacy View Controller-->
+        <!--Privacy Policy View Controller-->
         <scene sceneID="TIm-hQ-ij3">
             <objects>
-                <viewController storyboardIdentifier="SCCPrivacyViewController" id="ALG-yE-BiY" customClass="SCCPrivacyViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TBPrivacyPolicyViewController" id="ALG-yE-BiY" customClass="TBPrivacyPolicyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sbj-Ha-nFd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1155,7 +1163,7 @@
                             </wkWebView>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnT-Bk-B6e">
                                 <rect key="frame" x="20" y="738" width="353" height="60"/>
-                                <color key="backgroundColor" name="btn"/>
+                                <color key="backgroundColor" name="theme_color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="hoI-42-De1"/>
                                 </constraints>
@@ -1164,6 +1172,11 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="popAction:" destination="ALG-yE-BiY" eventType="touchUpInside" id="47d-S1-zfr"/>
                                 </connections>
@@ -1188,11 +1201,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="0on-Y7-8zf"/>
                     <connections>
-                        <outlet property="sccBackBtn" destination="dnT-Bk-B6e" id="WHG-jf-8wm"/>
-                        <outlet property="sccBottomCos" destination="KOV-xY-ceH" id="NTR-d4-3XT"/>
-                        <outlet property="sccLoadingView" destination="LQn-0W-xE5" id="Agd-WA-OpX"/>
-                        <outlet property="sccTopCos" destination="7dS-nG-Bgc" id="FrV-0t-olt"/>
-                        <outlet property="sccWebView" destination="OeV-hq-6e0" id="Fhq-9T-2di"/>
+                        <outlet property="tbBackButton" destination="dnT-Bk-B6e" id="WHG-jf-8wm"/>
+                        <outlet property="tbWKWebView" destination="OeV-hq-6e0" id="Fhq-9T-2di"/>
+                        <outlet property="tbWebLoadingView" destination="LQn-0W-xE5" id="Agd-WA-OpX"/>
+                        <outlet property="topConstraint" destination="7dS-nG-Bgc" id="FrV-0t-olt"/>
+                        <outlet property="tottomCostraint" destination="KOV-xY-ceH" id="NTR-d4-3XT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eni-ro-hUw" sceneMemberID="firstResponder"/>
@@ -1206,9 +1219,6 @@
         <image name="iconTiger" width="1024" height="1024"/>
         <image name="icon_normal" width="900" height="935"/>
         <namedColor name="Color">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="btn">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="theme_color">

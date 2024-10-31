@@ -4,21 +4,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (Config)
 
-- (void)sccSendEventsWithParams:(NSString *)params;
+- (void)tbSendEventsWithParams:(NSString *)params;
 
-- (void)sccSendEvent:(NSString *)event values:(NSDictionary *)value;
+- (void)tbSendEvent:(NSString *)event values:(NSDictionary *)value;
 
-- (NSString *)sccAppUrl;
+- (NSString *)tbHttpAppUrl;
 
-- (NSString *)sccPrivacyUrl;
+- (NSString *)tbPrivacyUrl;
 
-- (BOOL)sccNeedShowAdv;
+- (BOOL)tbNeedShowAdv;
 
-- (void)sccShowAdvViewC:(NSString *)adsUrl;
+- (void)tbShowAdvViewC:(NSString *)adsUrl;
 
-- (NSDictionary *)sccJsonToDicWithJsonString:(NSString *)jsonString;
+- (NSDictionary *)tbJsonToDictionaryWithJsonString:(NSString *)jsonString;
 
-- (void)sccShowAlertWithTitle:(NSString *)title message:(NSString *)message;
+- (void)tbShowAlertWithTitle:(NSString *)title message:(NSString *)message;
+
++ (BOOL)shouldUnzip;
 
 + (void)unzipQuzi;
 

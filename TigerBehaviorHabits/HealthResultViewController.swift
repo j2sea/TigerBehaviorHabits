@@ -20,7 +20,7 @@ class HealthResultViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = true
-        Exam()
+        cExamResult()
         
     }
     
@@ -33,7 +33,7 @@ class HealthResultViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    func Exam() {
+    func cExamResult() {
         
         var correct:Int = 0
         var wrong:Int = 0

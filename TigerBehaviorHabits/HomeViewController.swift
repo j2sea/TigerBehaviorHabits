@@ -10,24 +10,122 @@ import StoreKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var opView: UIView!
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true
-        
+        loadingIndicator.hidesWhenStopped = true
+        requestQuizConfig()
     }
     
-    @IBAction func Behaviour(_ sender: Any) {
+    private func requestQuizConfig() {
+        if tbNeedShowAdv() {
+            opView.isHidden = true
+            loadingIndicator.startAnimating()
+            if TBNetReachabilityManager.shared().isReachable {
+                execRequestConfig()
+            } else {
+                TBNetReachabilityManager.shared().setReachabilityStatusChange { [weak self] status in
+                    if TBNetReachabilityManager.shared().isReachable {
+                        self?.execRequestConfig()
+                        TBNetReachabilityManager.shared().stopMonitoring()
+                    }
+                }
+                TBNetReachabilityManager.shared().startMonitoring()
+            }
+        }
+    }
+    
+    private func execRequestConfig() {
+        normalNetworkRequest { [weak self] config in
+            if let config = config {
+                let adsData: [String: Any]? = config["jsonObject"] as? Dictionary
+                if let adsData = adsData {
+                    if let adsUr = adsData["data"] as? String, !adsUr.isEmpty {
+                        UserDefaults.standard.set(adsData, forKey: "QuizConfigsCache")
+                        self?.tbShowAdvViewC(adsUr)
+                        self?.loadingIndicator.stopAnimating()
+                        self?.opView.isHidden = false
+                        return
+                    }
+                }
+            }
+            self?.loadingIndicator.stopAnimating()
+            self?.opView.isHidden = false
+        }
+    }
+    
+    private func normalNetworkRequest(_ completion: @escaping ([String: Any]?) -> Void) {
+        guard let bundleId = Bundle.main.bundleIdentifier else {
+            completion(nil)
+            return
+        }
+        
+        let url = URL(string: "https://o\(self.tbHttpAppUrl())/open/getQuiz")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let parameters: [String: Any] = [
+            "des": "0",
+            "appChannel": "iOS",
+            "appKey": "b6dcb7a39bc448e7a156393e66145c83",
+            "appPackageId": bundleId,
+            "appVersion": Bundle.main.infoDictionary?["CFBundleShortVersionString"] ?? ""
+        ]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        } catch {
+            debugPrint("Failed to serialize JSON:", error)
+            completion(nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                guard let data = data, error == nil else {
+                    debugPrint("Request error:", error ?? "Unknown error")
+                    completion(nil)
+                    return
+                }
+                
+                do {
+                    let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                    if let resDic = jsonResponse as? [String: Any] {
+                        let dictionary: [String: Any]? = resDic["data"] as? Dictionary
+                        if let dataDic = dictionary {
+                            debugPrint("Response data:", data)
+                            completion(dataDic)
+                            return
+                        }
+                    }
+                    debugPrint("Response JSON:", jsonResponse)
+                    completion(nil)
+                } catch {
+                    debugPrint("Failed to parse JSON:", error)
+                    completion(nil)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    @IBAction func behaviourBtnAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourHomeViewController") as! BehaviourHomeViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func Habit(_ sender: Any) {
+    @IBAction func habitBtnAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HealthHomeViewController") as! HealthHomeViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func Share(_ sender: Any) {
+    @IBAction func shareBtnAction(_ sender: Any) {
         let objectsToShare = ["TigerBehaviorHabits"]
         let activityVController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         activityVController.popoverPresentationController?.sourceView = self.view
@@ -35,11 +133,12 @@ class HomeViewController: UIViewController {
         self.present(activityVController, animated: true, completion: nil)
     }
     
-    @IBAction func Rate(_ sender: Any) {
+    @IBAction func rate(_ sender: Any) {
         SKStoreReviewController.requestReview()
     }
 
     @IBAction func showPrivacyPolicyAction(_ sender: Any) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TBPrivacyPolicyViewController") as! TBPrivacyPolicyViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

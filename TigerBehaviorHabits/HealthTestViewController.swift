@@ -115,12 +115,12 @@ class HealthTestViewController: UIViewController {
     
     //MARK: IBActions
     
-    @IBAction func Back(_ sender: Any) {
+    @IBAction func backAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
     
-    @IBAction func OptionFour(_ sender: Any) {
+    @IBAction func createOptionFour(_ sender: Any) {
         if isSelected == false {
             isSelected = true
             btnNext.alpha = 1.0
@@ -142,7 +142,7 @@ class HealthTestViewController: UIViewController {
         }
     }
     
-    @IBAction func OptionThree(_ sender: Any) {
+    @IBAction func createOptionThree(_ sender: Any) {
         if isSelected == false {
             isSelected = true
             btnNext.alpha = 1.0
@@ -164,7 +164,7 @@ class HealthTestViewController: UIViewController {
     }
 }
 
-@IBAction func OptionTwo(_ sender: Any) {
+@IBAction func clickOptionTwo(_ sender: Any) {
     
     if isSelected == false {
         isSelected = true
@@ -187,7 +187,7 @@ class HealthTestViewController: UIViewController {
         
     }
 }
-@IBAction func OptionOne(_ sender: Any) {
+@IBAction func clickOptionOne(_ sender: Any) {
     if isSelected == false {
         isSelected = true
         btnNext.alpha = 1.0
@@ -209,7 +209,7 @@ class HealthTestViewController: UIViewController {
         
     }
 }
-@IBAction func Next(_ sender: Any) {
+@IBAction func doNext(_ sender: Any) {
     arrExam.append(currentQue)
     if arrExam.count < 10
     {

@@ -12,7 +12,7 @@ typedef NS_ENUM(NSInteger, AFNetworkReachabilityStatus) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SCCReachabilityManager : NSObject
+@interface TBNetReachabilityManager : NSObject
 
 @property (readonly, nonatomic, assign) AFNetworkReachabilityStatus networkReachabilityStatus;
 

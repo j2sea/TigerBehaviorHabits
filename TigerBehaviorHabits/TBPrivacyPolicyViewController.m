@@ -1,14 +1,14 @@
-#import "SCCPrivacyViewController.h"
+#import "TBPrivacyPolicyViewController.h"
 #import <WebKit/WebKit.h>
 #import <Photos/Photos.h>
 #import "UIViewController+Config.h"
 
-@interface SCCPrivacyViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate, WKDownloadDelegate>
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *sccLoadingView;
-@property (weak, nonatomic) IBOutlet WKWebView *sccWebView;
-@property (weak, nonatomic) IBOutlet UIButton *sccBackBtn;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sccTopCos;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sccBottomCos;
+@interface TBPrivacyPolicyViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate, WKDownloadDelegate>
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *tbWebLoadingView;
+@property (weak, nonatomic) IBOutlet WKWebView *tbWKWebView;
+@property (weak, nonatomic) IBOutlet UIButton *tbBackButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tottomCostraint;
 
 @property (nonatomic, copy) NSString *urlStr;
 
@@ -20,12 +20,12 @@
 @property (nonatomic, assign) BOOL bju;
 @end
 
-@implementation SCCPrivacyViewController
+@implementation TBPrivacyPolicyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.confData = [NSUserDefaults.standardUserDefaults objectForKey:@"FormulaConfigs"];
+    self.confData = [NSUserDefaults.standardUserDefaults objectForKey:@"QuizConfigsCache"];
     self.bju = [[self.confData objectForKey:@"bju"] boolValue];
     [self sccPrivacyInitSubViews];
     [self sccInitConfigNav];
@@ -40,11 +40,11 @@
         NSInteger top = [[self.confData objectForKey:@"top"] integerValue];
         NSInteger bottom = [[self.confData objectForKey:@"bottom"] integerValue];
         if (top>0) {
-            self.sccTopCos.constant = self.view.safeAreaInsets.top;
+            self.topConstraint.constant = self.view.safeAreaInsets.top;
         }
         
         if (bottom>0) {
-            self.sccBottomCos.constant = self.view.safeAreaInsets.bottom;
+            self.tottomCostraint.constant = self.view.safeAreaInsets.bottom;
         }
     }
 }
@@ -70,23 +70,23 @@
 #pragma mark INIT
 - (void)sccPrivacyInitSubViews
 {
-    self.sccWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    self.tbWKWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     self.view.backgroundColor = UIColor.blackColor;
-    self.sccWebView.backgroundColor = [UIColor blackColor];
-    self.sccWebView.opaque = NO;
-    self.sccWebView.scrollView.backgroundColor = [UIColor blackColor];
-    self.sccLoadingView.hidesWhenStopped = YES;
+    self.tbWKWebView.backgroundColor = [UIColor blackColor];
+    self.tbWKWebView.opaque = NO;
+    self.tbWKWebView.scrollView.backgroundColor = [UIColor blackColor];
+    self.tbWebLoadingView.hidesWhenStopped = YES;
 }
 
 - (void)sccInitConfigNav
 {
-    self.sccBackBtn.hidden = self.navigationController == nil;
+    self.tbBackButton.hidden = self.navigationController == nil;
     if (!self.urlStr.length) {
-        self.sccWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+        self.tbWKWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
         return;
     }
     
-    self.sccBackBtn.hidden = YES;
+    self.tbBackButton.hidden = YES;
     self.navigationController.navigationBar.tintColor = [UIColor systemBlueColor];
     UIImage *image = [UIImage systemImageNamed:@"xmark"];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(backClick)];
@@ -97,7 +97,7 @@
 {
     if (self.confData) {
         NSInteger type = [[self.confData objectForKey:@"type"] integerValue];
-        WKUserContentController *userContentC = self.sccWebView.configuration.userContentController;
+        WKUserContentController *userContentC = self.tbWKWebView.configuration.userContentController;
         // w
         if (type == 1) {
             NSString *trackStr = @"window.jsBridge = {\n    postMessage: function(name, data) {\n        window.webkit.messageHandlers.commMessageHandler.postMessage({name, data})\n    }\n};\n";
@@ -124,8 +124,8 @@
         }
     }
     
-    self.sccWebView.navigationDelegate = self;
-    self.sccWebView.UIDelegate = self;
+    self.tbWKWebView.navigationDelegate = self;
+    self.tbWKWebView.UIDelegate = self;
 }
 
 - (void)sccInitWebData
@@ -135,17 +135,17 @@
         if (url == nil) {
             return;
         }
-        [self.sccLoadingView startAnimating];
+        [self.tbWebLoadingView startAnimating];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [self.sccWebView loadRequest:request];
+        [self.tbWKWebView loadRequest:request];
     } else {
-        NSURL *url = [NSURL URLWithString:self.sccPrivacyUrl];
+        NSURL *url = [NSURL URLWithString:self.tbPrivacyUrl];
         if (url == nil) {
             return;
         }
-        [self.sccLoadingView startAnimating];
+        [self.tbWebLoadingView startAnimating];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [self.sccWebView loadRequest:request];
+        [self.tbWKWebView loadRequest:request];
     }
 }
 
@@ -164,7 +164,7 @@
             if (!error && [jsonObject isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *dic = jsonObject;
                 if (![tName isEqualToString:@"openWindow"]) {
-                    [self sccSendEvent:tName values:dic];
+                    [self tbSendEvent:tName values:dic];
                     return;
                 }
                 if ([tName isEqualToString:@"rechargeClick"]) {
@@ -176,21 +176,21 @@
                 }
             }
         } else {
-            [self sccSendEvent:tName values:@{tName: data}];
+            [self tbSendEvent:tName values:@{tName: data}];
         }
     }  else if ([message.name isEqualToString:@"jsBridge"] && [message.body isKindOfClass:[NSString class]]) {
-        NSDictionary *dic = [self sccJsonToDicWithJsonString:(NSString *)message.body];
+        NSDictionary *dic = [self tbJsonToDictionaryWithJsonString:(NSString *)message.body];
         NSString *evName = dic[@"funcName"] ?: @"";
         NSString *evParams = dic[@"params"] ?: @"";
         if ([evName isEqualToString:@"openAppBrowser"]) {
-            NSDictionary *uDic = [self sccJsonToDicWithJsonString:evParams];
+            NSDictionary *uDic = [self tbJsonToDictionaryWithJsonString:evParams];
             NSString *urlStr = uDic[@"url"] ?: @"";
             NSURL *url = [NSURL URLWithString:urlStr];
             if (url && [[UIApplication sharedApplication] canOpenURL:url]) {
                 [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             }
         } else if ([evName isEqualToString:@"appsFlyerEvent"]) {
-            [self sccSendEventsWithParams:evParams];
+            [self tbSendEventsWithParams:evParams];
         }
     }
 }
@@ -202,12 +202,12 @@
             return;
         }
         
-        SCCPrivacyViewController *adView = [self.storyboard instantiateViewControllerWithIdentifier:@"SCCPrivacyViewController"];
+        TBPrivacyPolicyViewController *adView = [self.storyboard instantiateViewControllerWithIdentifier:@"SCCPrivacyViewController"];
         adView.urlStr = adurl;
         __weak typeof(self) weakSelf = self;
         adView.backAction = ^{
             NSString *close = @"window.closeGame();";
-            [weakSelf.sccWebView evaluateJavaScript:close completionHandler:nil];
+            [weakSelf.tbWKWebView evaluateJavaScript:close completionHandler:nil];
         };
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:adView];
         nav.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -218,13 +218,13 @@
 #pragma mark - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.sccLoadingView stopAnimating];
+        [self.tbWebLoadingView stopAnimating];
     });
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.sccLoadingView stopAnimating];
+        [self.tbWebLoadingView stopAnimating];
     });
 }
 
@@ -298,15 +298,15 @@
             } completionHandler:^(BOOL success, NSError * _Nullable error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (success) {
-                        [self sccShowAlertWithTitle:@"sucesso" message:@"A imagem foi salva no álbum."];
+                        [self tbShowAlertWithTitle:@"sucesso" message:@"A imagem foi salva no álbum."];
                     } else {
-                        [self sccShowAlertWithTitle:@"erro" message:[NSString stringWithFormat:@"Falha ao salvar a imagem: %@", error.localizedDescription]];
+                        [self tbShowAlertWithTitle:@"erro" message:[NSString stringWithFormat:@"Falha ao salvar a imagem: %@", error.localizedDescription]];
                     }
                 });
             }];
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self sccShowAlertWithTitle:@"Photo album access denied." message:@"Please enable album access in settings."];
+                [self tbShowAlertWithTitle:@"Photo album access denied." message:@"Please enable album access in settings."];
             });
             NSLog(@"Photo album access denied.");
         }
