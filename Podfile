@@ -5,4 +5,5 @@ use_frameworks!
 target "TigerBehaviorHabits" do
     pod 'AppsFlyerFramework'
     pod 'Firebase/Messaging'
+    pod 'SSZipArchive'
 end

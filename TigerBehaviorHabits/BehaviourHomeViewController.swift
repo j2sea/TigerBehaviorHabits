@@ -16,14 +16,27 @@ class BehaviourHomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func HArd(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourTestViewController") as! BehaviourTestViewController
+        vc.isFromGame = "HardMode"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
-    */
+    
+    @IBAction func MEdium(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourTestViewController") as! BehaviourTestViewController
+        vc.isFromGame = "MediumMode"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func Easy(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BehaviourTestViewController") as! BehaviourTestViewController
+        vc.isFromGame = "EasyMode"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func Back(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 
 }

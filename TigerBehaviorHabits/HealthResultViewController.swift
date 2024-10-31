@@ -9,21 +9,61 @@ import UIKit
 
 class HealthResultViewController: UIViewController {
 
+    @IBOutlet weak var lblYourScore: UILabel!
+    @IBOutlet weak var lblHighScore: UILabel!
+
+    var arrExam : [QuizModel] = []
+    
+    //MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.isHidden = true
+        Exam()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - IBActions
+  
+    
+    @IBAction func Done(_ sender: Any) {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.setQuizHome()
+        navigationController?.popToRootViewController(animated: true)
     }
-    */
+    
+    func Exam() {
+        
+        var correct:Int = 0
+        var wrong:Int = 0
+        for obj in arrExam {
+            if obj.correctIndex == obj.selectedIndex {
+                correct = correct + 1
+            } else {
+                wrong = wrong + 1
+            }
+        }
+        
+        lblYourScore.text = "\(correct)"
+        
+        let high = UserDefaults.standard.value(forKey: "HealthHighScore")
+        if high == nil {
+            UserDefaults.standard.setValue(correct, forKey: "HealthHighScore")
+            UserDefaults.standard.synchronize()
+            self.lblHighScore.text = "\(correct)"
+        } else {
+            
+            if high as! Int > correct {
+                self.lblHighScore.text = "\(correct)"
+            } else {
+                UserDefaults.standard.setValue(correct, forKey: "HealthHighScore")
+                UserDefaults.standard.synchronize()
+                self.lblHighScore.text = "\(high ?? 0)"
+            }
+            
+        }
+        
+    }
 
 }

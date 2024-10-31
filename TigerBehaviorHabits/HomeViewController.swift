@@ -39,4 +39,7 @@ class HomeViewController: UIViewController {
         SKStoreReviewController.requestReview()
     }
 
+    @IBAction func showPrivacyPolicyAction(_ sender: Any) {
+        
+    }
 }
