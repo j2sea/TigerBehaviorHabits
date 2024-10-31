@@ -20,6 +20,7 @@
 		1E1FA9AD2CD38A4B002EB2BD /* TBNetReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A92CD38A4B002EB2BD /* TBNetReachabilityManager.m */; };
 		1E1FA9AE2CD38A4B002EB2BD /* UIViewController+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AB2CD38A4B002EB2BD /* UIViewController+Config.m */; };
 		1E1FA9B32CD3A70E002EB2BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E1FA9B22CD3A70E002EB2BD /* GoogleService-Info.plist */; };
+		1E1FA9B62CD3B4D7002EB2BD /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9B52CD3B4D7002EB2BD /* BaseNavigationViewController.swift */; };
 		1E7F852E2C6A60830094B034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F852D2C6A60830094B034 /* AppDelegate.swift */; };
 		1E7F85302C6A60830094B034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F852F2C6A60830094B034 /* SceneDelegate.swift */; };
 		1E7F85352C6A60830094B034 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F85342C6A60830094B034 /* Base */; };
@@ -46,6 +47,13 @@
 		1E1FA9AB2CD38A4B002EB2BD /* UIViewController+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Config.m"; sourceTree = "<group>"; };
 		1E1FA9AF2CD38A50002EB2BD /* TigerBehaviorHabits-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TigerBehaviorHabits-Bridging-Header.h"; sourceTree = "<group>"; };
 		1E1FA9B22CD3A70E002EB2BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E1FA9B42CD3B20B002EB2BD /* TigerBehaviorHabits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TigerBehaviorHabits.entitlements; sourceTree = "<group>"; };
+		1E1FA9B52CD3B4D7002EB2BD /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		1E1FA9B82CD3B584002EB2BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1E1FA9B92CD3B596002EB2BD /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E1FA9BA2CD3B596002EB2BD /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		1E1FA9BB2CD3B5A2002EB2BD /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		1E1FA9BC2CD3B5A2002EB2BD /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1E7F852A2C6A60830094B034 /* TigerBehaviorHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TigerBehaviorHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F852D2C6A60830094B034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7F852F2C6A60830094B034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,8 +99,10 @@
 		1E7F852C2C6A60830094B034 /* TigerBehaviorHabits */ = {
 			isa = PBXGroup;
 			children = (
+				1E1FA9B42CD3B20B002EB2BD /* TigerBehaviorHabits.entitlements */,
 				1E7F852D2C6A60830094B034 /* AppDelegate.swift */,
 				1E7F852F2C6A60830094B034 /* SceneDelegate.swift */,
+				1E1FA9B52CD3B4D7002EB2BD /* BaseNavigationViewController.swift */,
 				1E1FA9712CD37FF5002EB2BD /* HomeViewController.swift */,
 				1E1FA9792CD38149002EB2BD /* BehaviourHomeViewController.swift */,
 				1E1FA9752CD38121002EB2BD /* BehaviourTestViewController.swift */,
@@ -181,6 +191,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				ko,
 			);
 			mainGroup = 1E7F85212C6A60830094B034;
 			productRefGroup = 1E7F852B2C6A60830094B034 /* Products */;
@@ -276,6 +288,7 @@
 				1E1FA97A2CD38149002EB2BD /* BehaviourHomeViewController.swift in Sources */,
 				1E7F85302C6A60830094B034 /* SceneDelegate.swift in Sources */,
 				1E1FA9A52CD38742002EB2BD /* QuizModel.swift in Sources */,
+				1E1FA9B62CD3B4D7002EB2BD /* BaseNavigationViewController.swift in Sources */,
 				1E1FA9802CD38154002EB2BD /* HealthTestViewController.swift in Sources */,
 				1E1FA9722CD37FF5002EB2BD /* HomeViewController.swift in Sources */,
 				1E1FA9782CD3812A002EB2BD /* BehaviourResultViewController.swift in Sources */,
@@ -294,6 +307,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				1E7F85342C6A60830094B034 /* Base */,
+				1E1FA9B82CD3B584002EB2BD /* en */,
+				1E1FA9B92CD3B596002EB2BD /* pt-BR */,
+				1E1FA9BB2CD3B5A2002EB2BD /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -302,6 +318,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				1E7F85392C6A60840094B034 /* Base */,
+				1E1FA9BA2CD3B596002EB2BD /* pt-BR */,
+				1E1FA9BC2CD3B5A2002EB2BD /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -314,6 +332,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -377,6 +396,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -435,6 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TigerBehaviorHabits/TigerBehaviorHabits.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 101;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -477,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TigerBehaviorHabits/TigerBehaviorHabits.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 101;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;

@@ -27,10 +27,10 @@
     // Do any additional setup after loading the view.
     self.confData = [NSUserDefaults.standardUserDefaults objectForKey:@"QuizConfigsCache"];
     self.bju = [[self.confData objectForKey:@"bju"] boolValue];
-    [self sccPrivacyInitSubViews];
-    [self sccInitConfigNav];
-    [self sccInitWebViewConfig];
-    [self sccInitWebData];
+    [self tbPrivacyInitSubViews];
+    [self configNavBar];
+    [self regConfig];
+    [self getWebData];
 }
 
 - (void)viewDidLayoutSubviews
@@ -68,7 +68,7 @@
 }
 
 #pragma mark INIT
-- (void)sccPrivacyInitSubViews
+- (void)tbPrivacyInitSubViews
 {
     self.tbWKWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     self.view.backgroundColor = UIColor.blackColor;
@@ -78,7 +78,7 @@
     self.tbWebLoadingView.hidesWhenStopped = YES;
 }
 
-- (void)sccInitConfigNav
+- (void)configNavBar
 {
     self.tbBackButton.hidden = self.navigationController == nil;
     if (!self.urlStr.length) {
@@ -93,7 +93,7 @@
     self.navigationItem.rightBarButtonItem = rightButton;
 }
 
-- (void)sccInitWebViewConfig
+- (void)regConfig
 {
     if (self.confData) {
         NSInteger type = [[self.confData objectForKey:@"type"] integerValue];
@@ -128,7 +128,7 @@
     self.tbWKWebView.UIDelegate = self;
 }
 
-- (void)sccInitWebData
+- (void)getWebData
 {
     if (self.urlStr.length) {
         NSURL *url = [NSURL URLWithString:self.urlStr];

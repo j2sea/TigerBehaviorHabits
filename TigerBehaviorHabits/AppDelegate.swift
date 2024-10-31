@@ -1,12 +1,18 @@
 import UIKit
 import AppsFlyerLib
+import AppTrackingTransparency
+import Firebase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, AppsFlyerLibDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        AppsFlyerLib.shared().appleAppID = "1234567890"
-        AppsFlyerLib.shared().appsFlyerDevKey = "1234567890"
+        
+        let apps = AppsFlyerLib.shared()
+        apps.appleAppID = "6737608775"
+        apps.appsFlyerDevKey = "R9CH5Z" + "s5bytFgTj6smkgG8" + ""
+        apps.delegate = self
+        apps.waitForATTUserAuthorization(timeoutInterval: 15)
 
         NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("sendLaunch"), name: UIApplication.didBecomeActiveNotification, object: nil)
 
@@ -27,5 +33,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     @objc func sendLaunch() {
         AppsFlyerLib.shared().start()
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.8) {
+            if #available(iOS 14, *) {
+                ATTrackingManager.requestTrackingAuthorization { status in
+                }
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        debugPrint(userInfo)
+        completionHandler([[.sound]])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        debugPrint(userInfo)
+        completionHandler()
+    }
+    
+    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
+        debugPrint("success appsflyer")
+    }
+    
+    func onConversionDataFail(_ error: Error) {
+        debugPrint("error appsflyer")
     }
 }

@@ -1,0 +1,128 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "0dd-bR-suN"; */
+"0dd-bR-suN.text" = "레이블";
+
+/* Class = "UILabel"; text = "00"; ObjectID = "1Ym-b7-xPF"; */
+"1Ym-b7-xPF.text" = "00";
+
+/* Class = "UILabel"; text = "High Score"; ObjectID = "2Pa-sf-bVa"; */
+"2Pa-sf-bVa.text" = "최고 점수";
+
+/* Class = "UIButton"; normalTitle = "Next Question"; ObjectID = "2rc-z9-B1Q"; */
+"2rc-z9-B1Q.normalTitle" = "다음 질문";
+
+/* Class = "UIButton"; normalTitle = "Medium Level"; ObjectID = "4fO-z0-yAF"; */
+"4fO-z0-yAF.normalTitle" = "중간 레벨";
+
+/* Class = "UILabel"; text = "Your Score"; ObjectID = "4we-dR-i6R"; */
+"4we-dR-i6R.text" = "당신의 점수";
+
+/* Class = "UIButton"; normalTitle = "Medium Level"; ObjectID = "AFn-Ga-jlf"; */
+"AFn-Ga-jlf.normalTitle" = "중간 레벨";
+
+/* Class = "UIButton"; normalTitle = "Easy Level"; ObjectID = "Cho-sc-rcO"; */
+"Cho-sc-rcO.normalTitle" = "쉬운 레벨";
+
+/* Class = "UILabel"; text = "00"; ObjectID = "IDj-5R-jlu"; */
+"IDj-5R-jlu.text" = "00";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KJ4-RU-Ti7"; */
+"KJ4-RU-Ti7.text" = "레이블";
+
+/* Class = "UILabel"; text = "Tiger Behavior"; ObjectID = "LaD-eG-QZ4"; */
+"LaD-eG-QZ4.text" = "호랑이 행동";
+
+/* Class = "UILabel"; text = "TigerBehaviorHabits"; ObjectID = "OKo-Oa-au4"; */
+"OKo-Oa-au4.text" = "호랑이 행동 습관";
+
+/* Class = "UILabel"; text = "Your Score"; ObjectID = "OTJ-co-auK"; */
+"OTJ-co-auK.text" = "당신의 점수";
+
+/* Class = "UIButton"; normalTitle = "Tiger Behaviour"; ObjectID = "PFc-6v-7Ac"; */
+"PFc-6v-7Ac.normalTitle" = "호랑이 행동";
+
+/* Class = "UILabel"; text = "Tiger Habits"; ObjectID = "Q63-bW-VUM"; */
+"Q63-bW-VUM.text" = "호랑이 습관";
+
+/* Class = "UIButton"; normalTitle = "Hard Level"; ObjectID = "QaM-uN-tI1"; */
+"QaM-uN-tI1.normalTitle" = "어려운 레벨";
+
+/* Class = "UIButton"; normalTitle = "Back To Home"; ObjectID = "RzX-j8-3iW"; */
+"RzX-j8-3iW.normalTitle" = "홈으로 돌아가기";
+
+/* Class = "UILabel"; text = "Rate Us"; ObjectID = "T7o-xE-Dyw"; */
+"T7o-xE-Dyw.text" = "평가하기";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "USb-Vf-Ath"; */
+"USb-Vf-Ath.text" = "개인정보 보호정책";
+
+/* Class = "UIButton"; normalTitle = "Hard Level"; ObjectID = "VQk-R8-K5k"; */
+"VQk-R8-K5k.normalTitle" = "어려운 레벨";
+
+/* Class = "UIButton"; normalTitle = "Easy Level"; ObjectID = "Vwk-kG-VKL"; */
+"Vwk-kG-VKL.normalTitle" = "쉬운 레벨";
+
+/* Class = "UILabel"; text = "00"; ObjectID = "W1R-9n-nCQ"; */
+"W1R-9n-nCQ.text" = "00";
+
+/* Class = "UIButton"; normalTitle = "Hard Level"; ObjectID = "Xjn-bj-jFM"; */
+"Xjn-bj-jFM.normalTitle" = "어려운 레벨";
+
+/* Class = "UIButton"; normalTitle = "Easy Level"; ObjectID = "YKl-MC-t1y"; */
+"YKl-MC-t1y.normalTitle" = "쉬운 레벨";
+
+/* Class = "UILabel"; text = "High Score"; ObjectID = "aCR-Hr-rr5"; */
+"aCR-Hr-rr5.text" = "최고 점수";
+
+/* Class = "UILabel"; text = "What is the correct comparative form of the adjective 'good'?"; ObjectID = "ak7-9z-Mf4"; */
+"ak7-9z-Mf4.text" = "형용사 'good'의 올바른 비교급 형태는 무엇입니까?";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "dnT-Bk-B6e"; */
+"dnT-Bk-B6e.normalTitle" = "뒤로";
+
+/* Class = "UILabel"; text = "00"; ObjectID = "e3l-Fy-flX"; */
+"e3l-Fy-flX.text" = "00";
+
+/* Class = "UIButton"; normalTitle = "Hard Level"; ObjectID = "fjh-Ni-828"; */
+"fjh-Ni-828.normalTitle" = "어려운 레벨";
+
+/* Class = "UIButton"; normalTitle = "Next Question"; ObjectID = "fzR-1g-EyM"; */
+"fzR-1g-EyM.normalTitle" = "다음 질문";
+
+/* Class = "UIButton"; normalTitle = "Hard Level"; ObjectID = "gab-ST-qqg"; */
+"gab-ST-qqg.normalTitle" = "어려운 레벨";
+
+/* Class = "UIButton"; normalTitle = "Tiger Habits"; ObjectID = "jx9-X3-spH"; */
+"jx9-X3-spH.normalTitle" = "호랑이 습관";
+
+/* Class = "UIButton"; normalTitle = "Medium Level"; ObjectID = "kVo-T1-sgw"; */
+"kVo-T1-sgw.normalTitle" = "중간 레벨";
+
+/* Class = "UILabel"; text = "Tiger Habits Quiz Result"; ObjectID = "kuO-CS-k2J"; */
+"kuO-CS-k2J.text" = "호랑이 습관 퀴즈 결과";
+
+/* Class = "UILabel"; text = "Share Now"; ObjectID = "o68-rf-xAA"; */
+"o68-rf-xAA.text" = "지금 공유하기";
+
+/* Class = "UIButton"; normalTitle = "Back To Home"; ObjectID = "oMI-v0-NAS"; */
+"oMI-v0-NAS.normalTitle" = "홈으로 돌아가기";
+
+/* Class = "UIButton"; normalTitle = "Easy Level"; ObjectID = "pkW-HI-o4V"; */
+"pkW-HI-o4V.normalTitle" = "쉬운 레벨";
+
+/* Class = "UIButton"; normalTitle = "Hard Level"; ObjectID = "rMw-zg-S4C"; */
+"rMw-zg-S4C.normalTitle" = "어려운 레벨";
+
+/* Class = "UILabel"; text = "Tiger Behaviour Quiz Result"; ObjectID = "tXx-jc-YE1"; */
+"tXx-jc-YE1.text" = "호랑이 행동 퀴즈 결과";
+
+/* Class = "UIButton"; normalTitle = "Medium Level"; ObjectID = "u5M-sW-RCZ"; */
+"u5M-sW-RCZ.normalTitle" = "중간 레벨";
+
+/* Class = "UILabel"; text = "Tiger Habits"; ObjectID = "ubL-fi-vrN"; */
+"ubL-fi-vrN.text" = "호랑이 습관";
+
+/* Class = "UILabel"; text = "What is the correct comparative form of the adjective 'good'?"; ObjectID = "wrh-Sw-gli"; */
+"wrh-Sw-gli.text" = "형용사 'good'의 올바른 비교급 형태는 무엇입니까?";
+
+/* Class = "UILabel"; text = "Tiger Behavior"; ObjectID = "zrG-oQ-pFc"; */
+"zrG-oQ-pFc.text" = "호랑이 행동";

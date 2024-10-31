@@ -44,7 +44,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="124" id="OPM-b0-H3z"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Tiger Behaviour">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,7 +86,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Share Now">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -98,12 +98,18 @@
                                             <action selector="shareBtnAction:" destination="MMy-dg-q0q" eventType="touchUpInside" id="HoC-hm-i2o"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o68-rf-xAA">
+                                        <rect key="frame" x="20" y="134" width="111" height="124"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-Fi-CwC">
                                         <rect key="frame" x="141" y="134" width="111" height="124"/>
                                         <color key="backgroundColor" red="0.2239173055" green="0.1836479604" blue="0.072416760029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Rate Us">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -115,11 +121,17 @@
                                             <action selector="rate:" destination="MMy-dg-q0q" eventType="touchUpInside" id="YQB-RG-zx4"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Us" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7o-xE-Dyw">
+                                        <rect key="frame" x="141" y="134" width="111" height="124"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXp-c3-UTj">
                                         <rect key="frame" x="262" y="134" width="111" height="124"/>
                                         <color key="backgroundColor" name="theme_color"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Privacy Policy"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -129,6 +141,12 @@
                                             <action selector="showPrivacyPolicyAction:" destination="MMy-dg-q0q" eventType="touchUpInside" id="pfm-OA-llg"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USb-Vf-Ath">
+                                        <rect key="frame" x="262" y="134" width="111" height="124"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -139,17 +157,29 @@
                                     <constraint firstItem="PFc-6v-7Ac" firstAttribute="top" secondItem="qDN-kL-xRL" secondAttribute="top" id="6eX-ot-BS8"/>
                                     <constraint firstAttribute="trailing" secondItem="jx9-X3-spH" secondAttribute="trailing" constant="20" id="9Qr-aQ-K61"/>
                                     <constraint firstItem="wRd-Fi-CwC" firstAttribute="top" secondItem="VgR-rq-4bZ" secondAttribute="top" id="G9c-no-rGu"/>
+                                    <constraint firstItem="USb-Vf-Ath" firstAttribute="bottom" secondItem="OXp-c3-UTj" secondAttribute="bottom" id="Ie9-hM-5oo"/>
                                     <constraint firstItem="OXp-c3-UTj" firstAttribute="top" secondItem="VgR-rq-4bZ" secondAttribute="top" id="KSU-aS-1xK"/>
                                     <constraint firstItem="PFc-6v-7Ac" firstAttribute="leading" secondItem="qDN-kL-xRL" secondAttribute="leading" constant="20" id="Lau-ao-Cqy"/>
+                                    <constraint firstItem="T7o-xE-Dyw" firstAttribute="leading" secondItem="wRd-Fi-CwC" secondAttribute="leading" id="MOZ-Bb-82E"/>
                                     <constraint firstAttribute="trailing" secondItem="OXp-c3-UTj" secondAttribute="trailing" constant="20" id="MeO-pY-kED"/>
                                     <constraint firstItem="wRd-Fi-CwC" firstAttribute="width" secondItem="VgR-rq-4bZ" secondAttribute="width" id="OGA-bP-BGw"/>
+                                    <constraint firstItem="USb-Vf-Ath" firstAttribute="leading" secondItem="OXp-c3-UTj" secondAttribute="leading" id="UOp-ms-psF"/>
                                     <constraint firstItem="wRd-Fi-CwC" firstAttribute="leading" secondItem="VgR-rq-4bZ" secondAttribute="trailing" constant="10" id="X68-9k-vgr"/>
+                                    <constraint firstItem="o68-rf-xAA" firstAttribute="leading" secondItem="VgR-rq-4bZ" secondAttribute="leading" id="ZgS-ek-5J0"/>
                                     <constraint firstItem="VgR-rq-4bZ" firstAttribute="top" secondItem="PFc-6v-7Ac" secondAttribute="bottom" constant="10" id="cvt-X7-Tqs"/>
+                                    <constraint firstItem="o68-rf-xAA" firstAttribute="bottom" secondItem="VgR-rq-4bZ" secondAttribute="bottom" id="dN5-I7-VdM"/>
+                                    <constraint firstItem="o68-rf-xAA" firstAttribute="trailing" secondItem="VgR-rq-4bZ" secondAttribute="trailing" id="erI-cq-4qm"/>
                                     <constraint firstItem="wRd-Fi-CwC" firstAttribute="height" secondItem="VgR-rq-4bZ" secondAttribute="height" id="fe8-2z-cqX"/>
+                                    <constraint firstItem="T7o-xE-Dyw" firstAttribute="top" secondItem="wRd-Fi-CwC" secondAttribute="top" id="mvr-xk-eC9"/>
                                     <constraint firstItem="jx9-X3-spH" firstAttribute="width" secondItem="PFc-6v-7Ac" secondAttribute="width" id="n2E-4G-fPS"/>
                                     <constraint firstItem="jx9-X3-spH" firstAttribute="top" secondItem="qDN-kL-xRL" secondAttribute="top" id="p6b-gl-yS1"/>
+                                    <constraint firstItem="o68-rf-xAA" firstAttribute="top" secondItem="VgR-rq-4bZ" secondAttribute="top" id="pGN-EQ-ofc"/>
+                                    <constraint firstItem="USb-Vf-Ath" firstAttribute="top" secondItem="OXp-c3-UTj" secondAttribute="top" id="pNM-KL-fLw"/>
+                                    <constraint firstItem="T7o-xE-Dyw" firstAttribute="bottom" secondItem="wRd-Fi-CwC" secondAttribute="bottom" id="qnO-vc-QOC"/>
                                     <constraint firstItem="OXp-c3-UTj" firstAttribute="width" secondItem="VgR-rq-4bZ" secondAttribute="width" id="sPT-t8-PdL"/>
                                     <constraint firstItem="OXp-c3-UTj" firstAttribute="leading" secondItem="wRd-Fi-CwC" secondAttribute="trailing" constant="10" id="uhZ-fp-DSX"/>
+                                    <constraint firstItem="T7o-xE-Dyw" firstAttribute="trailing" secondItem="wRd-Fi-CwC" secondAttribute="trailing" id="vGU-20-fqc"/>
+                                    <constraint firstItem="USb-Vf-Ath" firstAttribute="trailing" secondItem="OXp-c3-UTj" secondAttribute="trailing" id="wZh-Tr-TkU"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-au-3lM">
@@ -547,7 +577,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the correct comparative form of the adjective 'good'?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-9z-Mf4">
-                                <rect key="frame" x="20" y="199.33333333333334" width="353" height="46.666666666666657"/>
+                                <rect key="frame" x="20" y="199.33333333333334" width="353" height="46"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -771,7 +801,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the correct comparative form of the adjective 'good'?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrh-Sw-gli">
-                                <rect key="frame" x="20" y="199.33333333333334" width="353" height="46.666666666666657"/>
+                                <rect key="frame" x="20" y="199.33333333333334" width="353" height="46"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -955,7 +985,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1R-9n-nCQ">
-                                <rect key="frame" x="20" y="360" width="353" height="93.333333333333314"/>
+                                <rect key="frame" x="20" y="360" width="353" height="92"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1053,7 +1083,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDj-5R-jlu">
-                                <rect key="frame" x="20" y="360" width="353" height="93.333333333333314"/>
+                                <rect key="frame" x="20" y="360" width="353" height="92"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1121,10 +1151,10 @@
             </objects>
             <point key="canvasLocation" x="2153" y="642"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation View Controller-->
         <scene sceneID="PyP-rO-d1b">
             <objects>
-                <navigationController id="iB4-4A-NMX" sceneMemberID="viewController">
+                <navigationController id="iB4-4A-NMX" customClass="BaseNavigationViewController" customModule="TigerBehaviorHabits" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oXG-VA-gMt">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
