@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("sendLaunch"), name: UIApplication.didBecomeActiveNotification, object: nil)
 
+        initPush()
+        
         if UIViewController.shouldUnzip() {
             UIViewController.unzipQuzi()
         }
@@ -30,11 +32,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
 
     }
+    
+    func initPush() {
+        // push
+        UNUserNotificationCenter.current().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+          options: authOptions,
+          completionHandler: { _, _ in }
+        )
+        UIApplication.shared.registerForRemoteNotifications()
+    }
 
     @objc func sendLaunch() {
         AppsFlyerLib.shared().start()
         
-        DispatchQueue.global().asyncAfter(deadline: .now() + 0.8) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.45) {
             if #available(iOS 14, *) {
                 ATTrackingManager.requestTrackingAuthorization { status in
                 }

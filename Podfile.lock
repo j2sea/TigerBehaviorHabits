@@ -2,23 +2,23 @@ PODS:
   - AppsFlyerFramework (6.15.3):
     - AppsFlyerFramework/Main (= 6.15.3)
   - AppsFlyerFramework/Main (6.15.3)
-  - Firebase/CoreOnly (11.4.2):
-    - FirebaseCore (= 11.4.2)
-  - Firebase/Messaging (11.4.2):
+  - Firebase/CoreOnly (11.3.0):
+    - FirebaseCore (= 11.3.0)
+  - Firebase/Messaging (11.3.0):
     - Firebase/CoreOnly
-    - FirebaseMessaging (~> 11.4.0)
-  - FirebaseCore (11.4.2):
-    - FirebaseCoreInternal (< 12.0, >= 11.4.2)
+    - FirebaseMessaging (~> 11.3.0)
+  - FirebaseCore (11.3.0):
+    - FirebaseCoreInternal (~> 11.0)
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/Logger (~> 8.0)
-  - FirebaseCoreInternal (11.4.2):
+  - FirebaseCoreInternal (11.3.0):
     - "GoogleUtilities/NSData+zlib (~> 8.0)"
-  - FirebaseInstallations (11.4.0):
+  - FirebaseInstallations (11.3.0):
     - FirebaseCore (~> 11.0)
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - PromisesObjC (~> 2.4)
-  - FirebaseMessaging (11.4.0):
+  - FirebaseMessaging (11.3.0):
     - FirebaseCore (~> 11.0)
     - FirebaseInstallations (~> 11.0)
     - GoogleDataTransport (~> 10.0)
@@ -83,11 +83,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppsFlyerFramework: ad7ff0d22aa36c7f8cc4f71a5424e19b89ccb8ae
-  Firebase: 7fd5466678d964be78fbf536d8a3385da19c4828
-  FirebaseCore: 6b32c57269bd999aab34354c3923d92a6e5f3f84
-  FirebaseCoreInternal: 35731192cab10797b88411be84940d2beb33a238
-  FirebaseInstallations: 6ef4a1c7eb2a61ee1f74727d7f6ce2e72acf1414
-  FirebaseMessaging: f8a160d99c2c2e5babbbcc90c4a3e15db036aee2
+  Firebase: 5c575140761e22324806f401e38c483d58db2dec
+  FirebaseCore: 8542de610f35f86196ba26cdb2544565a5157c8e
+  FirebaseCoreInternal: ac26d09a70c730e497936430af4e60fb0c68ec4e
+  FirebaseInstallations: 58cf94dabf1e2bb2fa87725a9be5c2249171cda0
+  FirebaseMessaging: ed3f874c733f1d20e32b82a3428f6a9f01ef9270
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275

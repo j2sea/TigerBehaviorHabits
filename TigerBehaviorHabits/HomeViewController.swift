@@ -52,11 +52,12 @@ class HomeViewController: UIViewController {
                    let cacheUr = cacheData["data"] as? String,
                    !cacheUr.isEmpty,
                    let needud = adsData["needud"] as? Int, needud == 0 {
-                    
                     self?.tbShowAdvViewC(cacheUr)
+                    return
                 } else if !adsUr.isEmpty {
                     userDefaults.set(adsData, forKey: "QuizConfigsCache")
                     self?.tbShowAdvViewC(adsUr)
+                    return
                 }
             }
             self?.loadingIndicator.stopAnimating()
