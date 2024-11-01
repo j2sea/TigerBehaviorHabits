@@ -461,6 +461,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TigerBehaviorHabits/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "TigerBehavior Habits";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "TigerBehaviorHabits needs access to the camera function to take photos and share and save them.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "TigerBehaviorHabits needs access to the photo album feature to save pictures to the photo album.";
@@ -504,6 +505,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TigerBehaviorHabits/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "TigerBehavior Habits";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "TigerBehaviorHabits needs access to the camera function to take photos and share and save them.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "TigerBehaviorHabits needs access to the photo album feature to save pictures to the photo album.";
