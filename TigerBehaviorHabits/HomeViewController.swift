@@ -132,7 +132,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func shareBtnAction(_ sender: Any) {
-        let objectsToShare = ["TigerBehaviorHabits"]
+        let objectsToShare = ["TigerBehavior Habits"]
         let activityVController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         activityVController.popoverPresentationController?.sourceView = self.view
         activityVController.popoverPresentationController?.sourceRect = CGRect(x: 100, y: 200, width: 300, height: 300)
@@ -140,7 +140,19 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func rate(_ sender: Any) {
-        SKStoreReviewController.requestReview()
+        if #available(iOS 18.0, *) {
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                AppStore.requestReview(in: windowScene)
+            }
+        } else {
+            if let windowScene = UIApplication.shared.windows.first?.windowScene {
+                if #available(iOS 14.0, *) {
+                    SKStoreReviewController.requestReview(in: windowScene)
+                } else {
+                    SKStoreReviewController.requestReview()
+                }
+            }
+        }
     }
 
     @IBAction func showPrivacyPolicyAction(_ sender: Any) {
