@@ -1,7 +1,8 @@
 import UIKit
 import AppsFlyerLib
 import AppTrackingTransparency
-import Firebase
+import FirebaseCore
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, AppsFlyerLibDelegate {
@@ -17,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("sendLaunch"), name: UIApplication.didBecomeActiveNotification, object: nil)
 
         initPush()
+        
+        // firebase
+        FirebaseApp.configure()
         
         if UIViewController.shouldUnzip() {
             UIViewController.unzipQuzi()
