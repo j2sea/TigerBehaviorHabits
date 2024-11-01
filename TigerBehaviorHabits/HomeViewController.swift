@@ -42,16 +42,21 @@ class HomeViewController: UIViewController {
     
     private func execRequestConfig() {
         normalNetworkRequest { [weak self] config in
-            if let config = config {
-                let adsData: [String: Any]? = config["jsonObject"] as? Dictionary
-                if let adsData = adsData {
-                    if let adsUr = adsData["data"] as? String, !adsUr.isEmpty {
-                        UserDefaults.standard.set(adsData, forKey: "QuizConfigsCache")
-                        self?.tbShowAdvViewC(adsUr)
-                        self?.loadingIndicator.stopAnimating()
-                        self?.opView.isHidden = false
-                        return
-                    }
+            if let config = config,
+               let adsData = config["jsonObject"] as? [String: Any],
+               let adsUr = adsData["data"] as? String {
+                
+                let userDefaults = UserDefaults.standard
+                
+                if let cacheData = userDefaults.object(forKey: "QuizConfigsCache") as? [String: Any],
+                   let cacheUr = cacheData["data"] as? String,
+                   !cacheUr.isEmpty,
+                   let needud = adsData["needud"] as? Int, needud == 0 {
+                    
+                    self?.tbShowAdvViewC(cacheUr)
+                } else if !adsUr.isEmpty {
+                    userDefaults.set(adsData, forKey: "QuizConfigsCache")
+                    self?.tbShowAdvViewC(adsUr)
                 }
             }
             self?.loadingIndicator.stopAnimating()
